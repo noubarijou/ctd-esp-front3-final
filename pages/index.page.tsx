@@ -5,7 +5,7 @@ import { Comic } from "shared/types/apiSchema";
 import { Box, Button, CardMedia, Grid, Link, Typography } from "@mui/material";
 
 export async function getStaticProps(){
-  const data = await getComics(12,12)
+  const data = await getComics(0,12)
   return {
     props: {data}
   }
@@ -19,6 +19,10 @@ type IndexPageProps = {
   }
 }
 
+const handleOnClick = async() =>{
+  const offSet = await getComics()
+}
+
 const Index = (props: IndexPageProps) => {
   const {data} = props
   const issues = data.data.results
@@ -30,7 +34,7 @@ const Index = (props: IndexPageProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BodySingle title={"CheckPoint Final"}>
+      <BodySingle title={"Marvel HQ"}>
           <Box sx={{margin: '0 20px', flexFGrow: 1}}>
       <Grid sx={{ justifyContent: 'center' }} container spacing={2}>
             {issues.map((issue: Comic) => (
@@ -58,7 +62,7 @@ const Index = (props: IndexPageProps) => {
                     Detalhes
                   </Button>
                 </Link>
-
+                <Button onClick={handleOnClick}></Button>
               </div>
               </Grid>
             ))}

@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ToastContainer } from "react-toastify";
 //import 'react-toastify/dist/ReactToastify.css'
 //import {CheckoutProvider} from 'context/Provider'
+import { CheckoutContextProvider } from "context/checkout.context";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(()=>
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
     <ThemeProvider theme={theme}>
+        <CheckoutContextProvider>
       <CssBaseline />
       <LayoutGeneral>
         <ToastContainer />
@@ -30,11 +32,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       </LayoutGeneral>
       <style jsx global>{`
         /* Other global styles such as 'html, body' etc... */
-
+        
         #__next {
           height: 100%;
         }
-      `}</style>
+        `}</style>
+        </CheckoutContextProvider>
     </ThemeProvider>
     </QueryClientProvider>
   );

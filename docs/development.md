@@ -12,7 +12,7 @@
 
 Instalamos as dependências
 
-`npm instalar`
+`npm install`
 
 Podemos iniciar nossa aplicação com o comando
 

@@ -22,13 +22,13 @@ Exame Final de Frontend VI
 
 ```
 # clona o repositório final para o seu computador
-git clone https://github.com/PedagogiaDHBrasil/ctd-esp-front3-final
+git clone https://github.com/PedagogiaDHBrasil/ctd-esp-front3-final.git
 
 # digite o diretório no final
 cd ctd-esp-front3-final
 
 # remove links para o repositório DH
-git remove rm origem
+git remote rm origem
 
 # Adicione o link ao repositório da sua conta do github, substitua <yourusername> pela sua conta
 git remote add origin https://github.com/<yourusername>/ctd-esp-front3-final

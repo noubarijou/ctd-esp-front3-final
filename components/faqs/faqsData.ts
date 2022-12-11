@@ -7,7 +7,7 @@ export type FaqsType = {
 export const faqsData: FaqsType[] = [
   {
     id: 1,
-    question: "Quantos comics eles têm?",
+    question: "Quantos quadrinhos estão no catálogo?",
     answer:
       "Atualmente temos toda a coleção Marvel. Algumas cópias podem ter pouca ou nenhuma disponibilidade no momento. Para mais informações você pode acessar https://marvel.com",
   },

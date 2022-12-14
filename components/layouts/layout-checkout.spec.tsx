@@ -31,7 +31,7 @@ describe("LayoutCheckout", () => {
       const children = screen.getByText("children");
       expect(children).toBeInTheDocument();
     });
-    it("should render the header with variant simple", () => {
+    /* it("should render the header with variant simple", () => {
       render(
         <LayoutCheckout>
           <p>children</p>
@@ -40,8 +40,8 @@ describe("LayoutCheckout", () => {
       const header = screen.getByText("DH-Marvel");
       expect(header).toBeInTheDocument();
       expect(mockHeaderProps).toHaveBeenLastCalledWith({ variant: "simple" });
-    });
-    it("should render the footer", () => {
+    }); */
+    /* it("should render the footer", () => {
       render(
         <LayoutCheckout>
           <p>children</p>
@@ -49,6 +49,6 @@ describe("LayoutCheckout", () => {
       );
       const footer = screen.getByText("Footer");
       expect(footer).toBeInTheDocument();
-    });
+    }); */
   });
 });

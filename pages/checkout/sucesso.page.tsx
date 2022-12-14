@@ -6,13 +6,9 @@ const Sucesso = () => {
   const { checkout } = useContext(CheckoutContext);
 
   if (!checkout) {
-    return <h3>null</h3>;
+    return <h3>eesh</h3>;
   }
 
-  useEffect(() => {
-    console.log(checkout);
-    console.log(checkout?.order?.image);
-  }, [])
 
   const { customer, order } = checkout;
   const { address } = customer;

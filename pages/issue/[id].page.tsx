@@ -3,7 +3,6 @@ import { getComic } from "dh-marvel/services/marvel/marvel.service"
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router"
 import { Comic } from "shared/types/apiSchema"
 
 
@@ -30,7 +29,7 @@ type IssueDetailsProps = {
     children?: React.ReactNode 
 }
 
-export const IssueDetailsPage = (props: IssueDetailsProps) => {
+const IssueDetailsPage = (props: IssueDetailsProps) => {
     const data = props
     const issue = data?.data
 

@@ -28,8 +28,8 @@ const Index = () => {
     (async () => {
       const data = await getComics((page-1) *12, 12)
       .then(res => {
-        setTotal(Number((res.data.total /12).toFixed()))
-        return res.data.results.map(({title, id, thumbnail}: Issue) => {
+        setTotal(Number((res?.data?.total /12).toFixed()))
+        return res?.data?.results.map(({title, id, thumbnail}: Issue) => {
           return {title, id, thumbnail}
         })
       })

@@ -19,5 +19,4 @@ describe("Success Page", () => {
             <Sucesso />
         </CheckoutContext.Provider>)
     })
-
 })

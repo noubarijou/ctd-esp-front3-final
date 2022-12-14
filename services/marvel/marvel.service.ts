@@ -15,6 +15,12 @@ export const getComics = async (offset?: number, limit?: number) => {
   if (limit) params.set("limit", `${limit}`);
   return fetchApi("comics", params.toString());
 };
+export const getNextComics = async (offset?: number, limit?: number) => {
+  const params = new URLSearchParams();
+  if (offset) params.set("offset", `${offset}`);
+  if (limit) params.set("limit", `${limit}`);
+  return fetchApi("comics", params.toString());
+};
 
 export const getComic = async (comicId: number) => {
   const data = await fetchApi(`comics/${comicId}`);

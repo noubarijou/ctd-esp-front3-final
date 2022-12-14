@@ -37,7 +37,7 @@ describe("LayoutCheckout", () => {
           <p>children</p>
         </LayoutCheckout>
       );
-      const header = screen.getByText("Header");
+      const header = screen.getByText("DH-Marvel");
       expect(header).toBeInTheDocument();
       expect(mockHeaderProps).toHaveBeenLastCalledWith({ variant: "simple" });
     });

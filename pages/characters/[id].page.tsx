@@ -19,7 +19,9 @@ export async function getStaticProps({ params }: any) {
 const CharacterInfo = (props: CharacterInfoProps) => {
     const data = props
     const personagem = data?.data
+    console.log(personagem.name)
     const comicsWithCharacter = personagem?.comics?.items
+    console.log(comicsWithCharacter)
     return (
         <Container>
             <>
@@ -49,9 +51,8 @@ const CharacterInfo = (props: CharacterInfoProps) => {
                     component='div'
                 >Quadrinhos com esse personagem:</Typography>
                 {comicsWithCharacter?.map((issue) => (
-                    <Link key={issue.resourceURI} href={`/issue/`}>
+                    <Link key={issue?.resourceURI} href={`/issue/`}>
                         <Typography
-                            key={issue.name}
                             sx={{ margin: '10px 0' }}
                             gutterBottom
                             variant="h6"

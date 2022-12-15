@@ -44,22 +44,22 @@ const CharacterInfo = (props: CharacterInfoProps) => {
                     gutterBottom
                     variant='h6'
                     component='span'>{personagem.description}</Typography>
-                <Typography
+                {/* <Typography
                     sx={{ marginTop: '20px' }}
                     gutterBottom
                     variant="h3"
                     component='div'
                 >Quadrinhos com esse personagem:</Typography>
-                {comicsWithCharacter?.map((issue) => (
-                    <Link key={issue?.resourceURI} href={`/issue/`}>
+                {comicsWithCharacter?.map(issue => (
+                    <Link key={issue.resourceURI} href={`/issue/`}>
                         <Typography
                             sx={{ margin: '10px 0' }}
                             gutterBottom
                             variant="h6"
                             component='div'
-                        >{issue.name}</Typography>
+                        >{issue?.name}</Typography>
                     </Link>
-                ))}
+                ))} */}
             </>
         </Container>
     )

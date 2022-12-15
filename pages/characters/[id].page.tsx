@@ -18,10 +18,7 @@ export async function getStaticProps({ params }: any) {
 }
 const CharacterInfo = (props: CharacterInfoProps) => {
     const data = props
-    const personagem = data?.data
-    console.log(personagem.name)
-    const comicsWithCharacter = personagem?.comics?.items
-    console.log(comicsWithCharacter)
+    
     return (
         <Container>
             <>
@@ -34,32 +31,33 @@ const CharacterInfo = (props: CharacterInfoProps) => {
                     gutterBottom
                     noWrap
                     variant="h4"
-                    component='div'>{personagem.name}</Typography>
+                    component='div'>{data?.data?.name}</Typography>
                 <CardMedia
                     component='img'
                     height='380'
-                    image={`${personagem.thumbnail.path}.${personagem.thumbnail.extension}`}
-                    alt={personagem.name} />
+                    image={`${data?.data?.thumbnail.path}.${data?.data?.thumbnail.extension}`}
+                    alt={data?.data?.name} />
                 <Typography
                     gutterBottom
                     variant='h6'
-                    component='span'>{personagem.description}</Typography>
-                {/* <Typography
+                    component='span'>{data?.data?.description}</Typography>
+                <Typography
                     sx={{ marginTop: '20px' }}
                     gutterBottom
                     variant="h3"
                     component='div'
                 >Quadrinhos com esse personagem:</Typography>
-                {comicsWithCharacter?.map(issue => (
-                    <Link key={issue.resourceURI} href={`/issue/`}>
+                {data?.data?.comics?.items?.map((issue) => (
+                    <div key={issue.resourceURI}>
                         <Typography
+                        key={issue?.name}
                             sx={{ margin: '10px 0' }}
                             gutterBottom
                             variant="h6"
                             component='div'
                         >{issue?.name}</Typography>
-                    </Link>
-                ))} */}
+                    </div>
+                ))}
             </>
         </Container>
     )

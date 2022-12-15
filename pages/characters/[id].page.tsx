@@ -18,8 +18,8 @@ export async function getStaticProps({ params }: any) {
 }
 const CharacterInfo = (props: CharacterInfoProps) => {
     const data = props
-    const personagem = data.data
-    const comicsWithCharacter = personagem.comics.items
+    const personagem = data?.data
+    const comicsWithCharacter = personagem?.comics?.items
     return (
         <Container>
             <>

@@ -51,7 +51,7 @@ const Index = () => {
       </Stack>
           <Box sx={{margin: '0 20px', flexFGrow: 1}}>
       <Grid sx={{ justifyContent: 'center' }} container spacing={2}>
-            {issues && issues.map((issue: Issue) => (
+            {issues && issues?.map((issue: Issue) => (
               <Grid key={issue.id} width={350} item>
                 <Typography
                 align='center'
